@@ -4,12 +4,9 @@
              StartupUri="MainWindow.xaml">
 
     <Application.Resources>
-
-        <!-- Register font Nunito -->
-        <FontFamily x:Key="nunito">
+        <FontFamily x:Key="NunitoFont">
             pack://application:,,,/Resource/Nunito/static/#Nunito
         </FontFamily>
-
     </Application.Resources>
 
 </Application>

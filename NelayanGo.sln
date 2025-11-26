@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModels", "ViewModels", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataServices", "DataServices", "{7669DA6D-F0C8-4778-8440-CB7F194A2211}"
 	ProjectSection(SolutionItems) = preProject
+		Resource\Nunito\static\App.xaml = Resource\Nunito\static\App.xaml
+		Resource\Nunito\static\App.xaml.cs = Resource\Nunito\static\App.xaml.cs
 		DataServicesNelayan.cs = DataServicesNelayan.cs
 	EndProjectSection
 EndProject
