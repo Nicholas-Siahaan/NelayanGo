@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NelayanGo", "NelayanGo.csproj", "{72B1D8BC-DD2B-4820-94D8-0E24BD52EDB9}"
 EndProject
@@ -18,11 +18,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataServices", "DataServices", "{7669DA6D-F0C8-4778-8440-CB7F194A2211}"
 	ProjectSection(SolutionItems) = preProject
 		DataServicesNelayan.cs = DataServicesNelayan.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
-	ProjectSection(SolutionItems) = preProject
-		MainWindow.cs = MainWindow.cs
 	EndProjectSection
 EndProject
 Global

@@ -33,6 +33,7 @@
             <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
                 <TextBlock Text="Home" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
                 <TextBlock Text="Logout" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                
 
                 <StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
                     <!-- Binding ke Model Nelayan di dalam ViewModel -->
@@ -54,108 +55,152 @@
                     CornerRadius="10" VerticalAlignment="Top" BorderBrush="LightGray" BorderThickness="1">
                 <TextBlock Text="Foto Profil" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
+            <TextBlock Text="DATA LENGKAP" Background ="#1C6BCC" FontSize="18" FontWeight="Bold" Margin="30,25,529,535" Grid.Column="1"/>
+            <Grid Background="#E6F2FF" Margin="30,49,15,327" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- ... Lanjutkan semua 13 binding data pribadi ... -->
+
+                <!-- Definisikan Row untuk 13 data -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- BARIS 0: Nama -->
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Nama"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding CurrentNelayan.Nama}" FontWeight="SemiBold" FontFamily=""/>
+
+                <!-- BARIS 1: Kode Identik -->
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Kode Identik"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding CurrentNelayan.KodeIdentik}"/>
+
+                <!-- BARIS 2: Wilayah -->
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Wilayah"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding CurrentNelayan.Wilayah}"/>
+                
+                <!-- BARIS 3 : Tahun Bergabung-->
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Tahun Bergabung"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="3" Grid.Column="2" Text="{Binding CurrentNelayan.TahunBergabung}"/>
+                
+                <!--Baris 4 : Status-->
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Status"/>
+                <TextBlock Grid.Row="4" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="4" Grid.Column="2" Text="{Binding CurrentNelayan.Status}"/>
+
+
+
+                <!-- BARIS 5: NIK -->
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="NIK"/>
+                <TextBlock Grid.Row="5" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="5" Grid.Column="2" Text="{Binding CurrentNelayan.NIK}"/>
+
+                <!-- BARIS 6: Tanggal Lahir -->
+                <TextBlock Grid.Row="6" Grid.Column="0" Text="Tanggal Lahir"/>
+                <TextBlock Grid.Row="6" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="6" Grid.Column="2" Text="{Binding CurrentNelayan.TanggalLahir}"/>
+
+                <!-- BARIS 7: Tempat Lahir -->
+                <TextBlock Grid.Row="7" Grid.Column="0" Text="Tempat Lahir"/>
+                <TextBlock Grid.Row="7" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="7" Grid.Column="2" Text="{Binding CurrentNelayan.TempatLahir}"/>
+                
+                <!--BARIS 8: Alamat KTP-->
+                <TextBlock Grid.Row="8" Grid.Column="0" Text="Alamat KTP"/>
+                <TextBlock Grid.Row="8" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="8" Grid.Column="2" Text="{Binding CurrentNelayan.AlamatKTP}"/>
+
+                <!--BARIS 9: Nomor Telepon-->
+                <TextBlock Grid.Row="9" Grid.Column="0" Text="Nomor Telepon"/>
+                <TextBlock Grid.Row="9" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="9" Grid.Column="2" Text="{Binding CurrentNelayan.NomorTelepon}"/>
+
+                <!--BARIS 10: AGAMA-->
+                <TextBlock Grid.Row="10" Grid.Column="0" Text="Agama"/>
+                <TextBlock Grid.Row="10" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="10" Grid.Column="2" Text="{Binding CurrentNelayan.Agama}"/>
+
+                <!--BARIS 11: Golongan Darah-->
+                <TextBlock Grid.Row="11" Grid.Column="0" Text="Golongan Darah"/>
+                <TextBlock Grid.Row="11" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="11" Grid.Column="2" Text="{Binding CurrentNelayan.GolonganDarah}"/>
+
+                <!--BARIS 12: Email-->
+                <TextBlock Grid.Row="12" Grid.Column="0" Text="Email"/>
+                <TextBlock Grid.Row="12" Grid.Column="1" Text=":"/>
+                <TextBlock Grid.Row="12" Grid.Column="2" Text="{Binding CurrentNelayan.Email}"/>
+
+            </Grid>
+            <TextBlock Text="INFO" FontSize="18" FontWeight="Bold" Margin="149,306,121,254" Grid.ColumnSpan="2"/>
+            <Grid Background="#0361A0" Margin="135,330,135,54" Grid.ColumnSpan="2">
+
+                <Grid.Resources>
+                    <Style TargetType="{x:Type TextBlock}" x:Key="InfoNumber">
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                    </Style>
+                    <Style TargetType="{x:Type TextBlock}" x:Key="InfoLabel">
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="TextAlignment" Value="Center"/>
+                        <Setter Property="Margin" Value="0,5,0,0"/>
+                    </Style>
+                </Grid.Resources>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- ... Lanjutkan binding untuk semua metrik info lainnya ... -->
+
+                <!-- ROW 0, COL 0: TOTAL WAKTU AKTIF (HARI) -->
+                <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Style="{StaticResource InfoNumber}" Text="{Binding CurrentNelayan.TotalWaktuAktifHari}"/>
+                    <TextBlock Style="{StaticResource InfoLabel}" Text="TOTAL WAKTU AKTIF (HARI)"/>
+                </StackPanel>
+
+                <!-- ROW 0, COL 1: TOTAL JARAK BERLAYAR (KM) -->
+                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Style="{StaticResource InfoNumber}" Text="{Binding CurrentNelayan.TotalJarakBerlayarKM}"/>
+                    <TextBlock Style="{StaticResource InfoLabel}" Text="TOTAL JARAK BERLAYAR (KM)"/>
+                </StackPanel>
+
+                <!-- ROW 1, COL 0: TOTAL JUMLAH BERLAYAR -->
+                <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Style="{StaticResource InfoNumber}" Text="{Binding CurrentNelayan.TotalJumlahBerlayar}"/>
+                    <TextBlock Style="{StaticResource InfoLabel}" Text="TOTAL JUMLAH BERLAYAR"/>
+                </StackPanel>
+
+            </Grid>
 
             <!-- Kanan: DATA LENGKAP & INFO -->
-            <StackPanel Grid.Column="1" Margin="20,0,0,0">
-
-                <!-- DATA LENGKAP -->
-                <TextBlock Text="DATA LENGKAP" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
-
-                <!-- Grid untuk Data Pribadi (Gunakan Grid sederhana untuk 13 baris data) -->
-                <Grid Background="#E6F2FF" Padding="15">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="150"/>
-                        <ColumnDefinition Width="10"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <!-- Definisikan Row untuk 13 data -->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-
-                    <!-- BARIS 0: Nama -->
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Nama"/>
-                    <TextBlock Grid.Row="0" Grid.Column="1" Text=":"/>
-                    <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding CurrentNelayan.Nama}" FontWeight="SemiBold"/>
-
-                    <!-- BARIS 1: Kode Identik -->
-                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Kode Identik"/>
-                    <TextBlock Grid.Row="1" Grid.Column="1" Text=":"/>
-                    <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding CurrentNelayan.KodeIdentik}"/>
-
-                    <!-- BARIS 5: NIK -->
-                    <TextBlock Grid.Row="5" Grid.Column="0" Text="NIK"/>
-                    <TextBlock Grid.Row="5" Grid.Column="1" Text=":"/>
-                    <TextBlock Grid.Row="5" Grid.Column="2" Text="{Binding CurrentNelayan.NIK}"/>
-
-                    <!-- ... Lanjutkan semua 13 binding data pribadi ... -->
-
-                </Grid>
-
-                <!-- === BAGIAN INFO === -->
-                <TextBlock Text="INFO" FontSize="18" FontWeight="Bold" Margin="0,30,0,10"/>
-
-                <Grid Background="#0361A0" Height="200">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid.Resources>
-                        <Style TargetType="TextBlock" x:Key="InfoNumber">
-                            <Setter Property="FontSize" Value="30"/>
-                            <Setter Property="FontWeight" Value="Bold"/>
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter Property="HorizontalAlignment" Value="Center"/>
-                        </Style>
-                        <Style TargetType="TextBlock" x:Key="InfoLabel">
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter Property="HorizontalAlignment" Value="Center"/>
-                            <Setter Property="TextAlignment" Value="Center"/>
-                            <Setter Property="Margin" Value="0,5,0,0"/>
-                        </Style>
-                    </Grid.Resources>
-
-                    <!-- ROW 0, COL 0: TOTAL WAKTU AKTIF (HARI) -->
-                    <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
-                        <TextBlock Style="{StaticResource InfoNumber}" Text="{Binding CurrentNelayan.TotalWaktuAktifHari}"/>
-                        <TextBlock Style="{StaticResource InfoLabel}" Text="TOTAL WAKTU AKTIF (HARI)"/>
-                    </StackPanel>
-
-                    <!-- ROW 0, COL 1: TOTAL JARAK BERLAYAR (KM) -->
-                    <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
-                        <TextBlock Style="{StaticResource InfoNumber}" Text="{Binding CurrentNelayan.TotalJarakBerlayarKM}"/>
-                        <TextBlock Style="{StaticResource InfoLabel}" Text="TOTAL JARAK BERLAYAR (KM)"/>
-                    </StackPanel>
-
-                    <!-- ROW 1, COL 0: TOTAL JUMLAH BERLAYAR -->
-                    <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">
-                        <TextBlock Style="{StaticResource InfoNumber}" Text="{Binding CurrentNelayan.TotalJumlahBerlayar}"/>
-                        <TextBlock Style="{StaticResource InfoLabel}" Text="TOTAL JUMLAH BERLAYAR"/>
-                    </StackPanel>
-
-                    <!-- ... Lanjutkan binding untuk semua metrik info lainnya ... -->
-
-                </Grid>
-            </StackPanel>
         </Grid>
     </Grid>
 </Window>
