@@ -22,15 +22,15 @@
         <Grid Grid.Row="0" Background="#0361A0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="316"/>
             </Grid.ColumnDefinitions>
+            <Image Source="image/logo.jpg" Height="40" Width="40" Margin="10,13,150,0" VerticalAlignment="Top" Grid.Column="0"/>
+            <TextBlock Text="NELAYAN GO" Grid.Column="0" FontFamily="{StaticResource nunito}" Foreground="White" 
+                       VerticalAlignment="Center" Margin="64,0,440,0" 
+                       FontSize="20" FontWeight="Bold" Height="28" Grid.ColumnSpan="2"/>
 
-            <TextBlock Text="N | NELAYAN GO" Grid.Column="0" FontFamily="{StaticResource nunito}" Foreground="White" 
-                       VerticalAlignment="Center" Margin="20,0,0,0" 
-                       FontSize="20" FontWeight="Bold"/>
-
-            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="74,0,0,0" Width="110">
                 <TextBlock Text="Home" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
                 <TextBlock Text="Logout" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
 
@@ -220,7 +220,8 @@
                                 Width="*"/>
                         </Grid.ColumnDefinitions>
                         <!-- ... Lanjutkan binding untuk semua metrik info lainnya ... -->
-            <!-- ROW 0, COL 0: TOTAL WAKTU AKTIF (HARI) --><StackPanel
+                        <!-- ROW 0, COL 0: TOTAL WAKTU AKTIF (HARI) -->
+                        <StackPanel
                             VerticalAlignment="Top" Grid.Row="1" Margin="0,4,0,0" Grid.Column="0">
                             <TextBlock
                                 Style="{StaticResource InfoNumber}" Text="{Binding CurrentNelayan.TotalWaktuAktifHari}"/>
@@ -229,7 +230,8 @@
 
 
                         </StackPanel>
-            <!-- ROW 0, COL 1: TOTAL JARAK BERLAYAR (KM) --><StackPanel
+                        <!-- ROW 0, COL 1: TOTAL JARAK BERLAYAR (KM) -->
+                        <StackPanel
                             VerticalAlignment="Top" Grid.Row="1" Margin="0,4,0,0" Grid.Column="1">
                             <TextBlock
                                 Style="{StaticResource InfoNumber}" Text="{Binding CurrentNelayan.TotalJarakBerlayarKM}"/>
@@ -238,7 +240,8 @@
 
 
                         </StackPanel>
-            <!-- ROW 1, COL 0: TOTAL JUMLAH BERLAYAR --><StackPanel
+                        <!-- ROW 1, COL 0: TOTAL JUMLAH BERLAYAR -->
+                        <StackPanel
                             VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">
                             <TextBlock
                                 Style="{StaticResource InfoNumber}" Text="{Binding CurrentNelayan.TotalJumlahBerlayar}"/>
