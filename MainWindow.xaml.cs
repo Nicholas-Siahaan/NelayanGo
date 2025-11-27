@@ -19,6 +19,8 @@ namespace NelayanGo
         public MainWindow()
         {
             InitializeComponent();
+            var inputWindow = new InputTangapanWindow();
+            inputWindow.Show();
         }
     }
 }
