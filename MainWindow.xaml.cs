@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using NelayanGo.Helpers;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,8 +20,14 @@ namespace NelayanGo
         public MainWindow()
         {
             InitializeComponent();
-            var inputWindow = new InputTangapanWindow();
-            inputWindow.Show();
+            //var inputWindow = new InputTangapanWindow();
+            //inputWindow.Show();
         }
+        private void HomeLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Panggil NavigationHelper untuk membuka AnalisisWindow
+            NavigationHelper.NavigateKeHome(this); // Pass 'this' jika Anda ingin MainWindow ditutup
+        }
+
     }
 }
