@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		AnalisisDataModel.cs = AnalisisDataModel.cs
 		AnalisisViewModel.cs = AnalisisViewModel.cs
 		AnalisisWindow.xaml.cs = AnalisisWindow.xaml.cs
+		CuacaModel.cs = CuacaModel.cs
 		DaftarTangapanViewModel.cs = DaftarTangapanViewModel.cs
 		DaftarTangapanWindow.xaml.cs = DaftarTangapanWindow.xaml.cs
 		DaftarTangkapan.cs = DaftarTangkapan.cs
@@ -24,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		HargaPasarViewModel.cs = HargaPasarViewModel.cs
 		HargaPasarWindow.xaml.cs = HargaPasarWindow.xaml.cs
 		InputTangapanWindow.xaml.cs = InputTangapanWindow.xaml.cs
+		PetaCuacaViewModel.cs = PetaCuacaViewModel.cs
+		ViewModels\PetaCuacaViewModel.cs = ViewModels\PetaCuacaViewModel.cs
 		PetaWindow.xaml.cs = PetaWindow.xaml.cs
 		ProfitModel.cs = ProfitModel.cs
 	EndProjectSection
