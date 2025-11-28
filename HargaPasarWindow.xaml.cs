@@ -17,24 +17,31 @@ namespace NelayanGo
         private void HomeLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             // Cukup panggil helper, dan berikan tujuan sebagai string
-            NavigationHelper.NavigateFromHeaderClick(sender, "Home");
+            //NavigationHelper.NavigateFromHeaderClick(sender, "Home");
+            var analisisWindow = new AnalisisWindow();
+            analisisWindow.Show();
+
+            this.Close();
+        }
+        private void MapsLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var petaWindow = new PetaWindow();
+            petaWindow.Show();
+            this.Close();
+        }
+
+        private void HargaPasar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var hargaPasarWindow = new HargaPasarWindow();
+            hargaPasarWindow.Show();
+            this.Close();
         }
 
         private void HasilTangkapanLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            // Cukup panggil helper, dan berikan tujuan sebagai string
-            NavigationHelper.NavigateFromHeaderClick(sender, "Daftar Tangkapan");
-        }
-
-        // Tambahkan handler untuk navigasi lain
-        private void MapsLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            NavigationHelper.NavigateFromHeaderClick(sender, "Maps");
-        }
-        // Tambahkan handler untuk navigasi lain
-        private void HargaPasarLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            NavigationHelper.NavigateFromHeaderClick(sender, "Harga pasar");
+            var DaftarTangapanWindow = new DaftarTangapanWindow();
+            DaftarTangapanWindow.Show();
+            this.Close();
         }
     }
 }

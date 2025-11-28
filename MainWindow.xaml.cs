@@ -25,9 +25,14 @@ namespace NelayanGo
         }
         private void HomeLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            // Panggil NavigationHelper untuk membuka AnalisisWindow
-            NavigationHelper.NavigateKeHome(this); // Pass 'this' jika Anda ingin MainWindow ditutup
+            // Cukup panggil helper, dan berikan tujuan sebagai string
+            //NavigationHelper.NavigateFromHeaderClick(sender, "Home");
+            var analisisWindow = new AnalisisWindow();
+            analisisWindow.Show();
+
+            this.Close();
         }
+        
 
     }
 }
